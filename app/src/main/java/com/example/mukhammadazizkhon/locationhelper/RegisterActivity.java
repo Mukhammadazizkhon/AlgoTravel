@@ -2,7 +2,6 @@ package com.example.mukhammadazizkhon.locationhelper;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.MediaCodec;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -43,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity
             {
                 if(isUserConnectedToNetwork()){
                     String mail = userEmail.getText().toString();
-                    boolean isCorrectEmail = isEmailValid(mail);
+                    boolean isCorrectEmail = isValidEmail(mail);
                     if(isCorrectEmail){
                         Toast.makeText(RegisterActivity.this, "Correct EMail", Toast.LENGTH_SHORT).show();
                     }
@@ -65,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity
         userEmail = (EditText)findViewById(R.id.email);
     }
 
-    private boolean isEmailValid(String userEmail)
+    private boolean isValidEmail(String userEmail)
     {
         String regexExpression = "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
                 + "((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
