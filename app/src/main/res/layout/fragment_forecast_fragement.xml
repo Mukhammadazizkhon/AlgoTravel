@@ -1,0 +1,51 @@
+<RelativeLayout
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="16dp"
+             tools:context="com.example.mukhammadazizkhon.locationhelper.ForecastFragement">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/mainInfo"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="5 DAYS WEATHER FORECAST"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textCityName"
+            android:text="Weather in Tashkent, UZB"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textGeoCoords"
+            android:text="[35,45]"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimary1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerForcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainInfo">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
